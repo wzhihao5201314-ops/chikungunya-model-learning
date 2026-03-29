@@ -6,3 +6,21 @@
 相关文献的database：1.PubMed 适合抓医学、流行病学和建模文章，官方说明它收录超过 4000 万条生物医学文献；
 2.PMC 适合拿免费全文；
 3.Web of Science 和 Scopus 更适合做“被引追踪、找高水平期刊、看方法传播链”。
+
+
+搜索数据库的关键词:
+1. 疾病+机理模型
+("chikungunya" OR "CHIKV") AND
+("mathematical model" OR "transmission dynamics" OR "SEIR" OR "vector-host" OR "Ross-Macdonald")
+
+2. 疾病+预测/时空
+("chikungunya" OR "CHIKV") AND
+("forecast*" OR "prediction" OR "spatiotemporal" OR "Bayesian" OR "spatial model" OR "Rt")
+
+3. 疾病+环境/媒介
+("chikungunya" OR "Aedes-borne arbovirus") AND
+("temperature" OR "rainfall" OR "climate" OR "vector population" OR "Aedes aegypti" OR "Aedes albopictus")
+
+4. 相似病种迁移
+("dengue" OR "zika" OR "arbovirus") AND
+("spatiotemporal model" OR "Bayesian hierarchical model" OR "forecasting" OR "vector dynamics")
