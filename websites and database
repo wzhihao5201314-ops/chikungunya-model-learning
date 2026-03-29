@@ -24,3 +24,29 @@
 4. 相似病种迁移
 ("dengue" OR "zika" OR "arbovirus") AND
 ("spatiotemporal model" OR "Bayesian hierarchical model" OR "forecasting" OR "vector dynamics")
+
+第一层：综述/地图型文章，先建立全景。
+先看 Reiner 等关于蚊媒病原传播模型的系统综述，它能帮你把 Ross–Macdonald 传统框架、后续变体、常见建模假设一次看清；再看 Lim 等关于 Aedes-borne arbovirus 风险制图方法综述，能知道现在大家常用哪些协变量和空间预测思路；再看 de Lima 等关于 arbovirus 机器学习预测的系统综述，知道预测模型常见输入、输出和缺口；最后看 San Miguel 等对 Aedes aegypti 微分方程种群模型的系统综述，尤其适合你后面把“病例模型”和“媒介模型”接起来。
+
+第二层：疾病本体与参数边界。
+Kang 等在 Lancet Infectious Diseases 上做了基孔肯雅热血清流行率、感染力（FOI）和慢性后遗症的系统综述/建模，这类文章特别重要，因为它不是教你怎么写方程，而是告诉你哪些参数、终点和疾病负担指标是值得纳入论文的；de Souza 等在 Lancet Regional Health – Americas 总结了基孔肯雅热进入美洲十年的负担与流行格局，适合你写巴西研究的文献综述背景；围绕 2025 广东暴发，Tee 等和 Dai 等的综述/评述能帮你快速补齐中国语境。
+
+第三层：基孔肯雅热“经典机理模型”。
+Yakob 2013 这篇是很好的入门样板：人-蚊两宿主 ODE、参数来自文献、对留尼汪疫情做拟合、算 reproduction number、再做敏感性分析；Moulay 2012 则把模型推进到最优控制，直接告诉你“灭幼虫、治疗、预防”怎么进入控制变量。你后面无论做巴西还是广东，正文里的“模型原型”几乎都可以从这两类文章学起。
+
+第四层：巴西方向的高价值样板。
+Yakob 2022 用巴西通报数据做了 SARIMA + 空间聚集分析，适合你学“国家级时间序列预测”；Argibay 2025 在萨尔瓦多做到 census tract 级别，用 SaTScan + Bayesian spatial model + INLA 研究局部聚集、收入、植被和地表温度，适合你学“城市微空间传播”；Freitas 2021 研究里约 2016 首次流行，重点是社会经济、环境和温度的时空作用；Pavani 2023 和 2025 则把 dengue 与 chikungunya 联合建模，分别做联合空间和多变量时空 Bayes 模型，非常适合你未来写“广东 vs 巴西”或“单病 vs 共流行”扩展。
+
+第五层：广东/中国方向的直接参考。
+中国这条线要先读 Dongguan 2010 的首例本地暴发文章，那里有病例年龄分布、空间聚集、媒介指数变化和控制措施；再读 Foshan 2025 的 transmissibility modelling study，看如何从病例数据反推总体传播力；再读 2026 的 Foshan district-level Bayesian Rt 文章，看如何处理分区、时变报告延迟和瞬时有效再生数；最后用 2025 的广东暴发综述来补公共卫生叙事。对你来说，广东论文部分最有价值的不是“量大”，而是暴发过程清晰、局部建模问题具体。
+
+第六层：相似病种迁移文献，一定要读。
+不要把自己限制在基孔肯雅热。Aedes 传播病的很多高质量方法其实先在 dengue / zika 上成熟。比如 Fortaleza 的三病共流行时空传播研究、巴西全国 confirmed/discarded case 的 VAR 时间序列分析、以及更一般的 Aedes 风险制图和时空预测综述，都能直接迁移到你的题目，尤其适合处理误诊、共流行、时空异质性和气候驱动。
+
+阅读时不要“顺着论文读完”，而要按问题读。每篇文章只提取 8 件事：
+1）研究对象与地区；2）时间尺度（日/周/月）；3）空间尺度（国家/州/市/街区）；4）状态变量与方程；5）季节性/温度/媒介如何进入模型；6）参数来源与估计方法；7）验证方式；8）局限性。
+你最好自己建一个文献矩阵，把 20–30 篇核心文献放进去，最后一眼就能看出：谁是机理模型，谁是统计预测，谁做了空间，谁处理了媒介，谁处理了报告延迟，谁能直接迁移到广东，谁更适合巴西。
+
+最后再决定你自己的论文框架。对于你的数据结构，比较稳的路线通常不是“一套模型硬套两地”，而是：一个共同主框架 + 两个地区化子模型。巴西部分偏中长期时空预测，广东部分偏短期暴发动力学与控制评估，这样论文会更自然，也更像真正的 SCI 选题。
+
+你后面重点盯这些期刊就行：Lancet Infectious Diseases、Lancet Regional Health – Americas、Statistical Medicine、Biostatistics、PLOS Neglected Tropical Diseases、Parasit Vectors、Epidemics、International Journal of Infectious Diseases。你现在这个方向的高质量方法和区域研究，已经能在这些刊物或同层级平台上看到明显路径
